@@ -17,7 +17,7 @@ services:
     ports:
       - 4566:4566
     environment:
-      SERVICES: dynamodb,ssm
+      SERVICES: dynamodb,ssm,acm
 
   redis:
     image: redis
