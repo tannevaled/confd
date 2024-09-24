@@ -1,0 +1,7 @@
+[template]
+mode = "0644"
+src = "certificate.conf.tmpl"
+dest = "/tmp/certificate.pem"
+keys = [
+  "1e137f2e-8764-438d-9b08-b3cb2b0a7217"
+]

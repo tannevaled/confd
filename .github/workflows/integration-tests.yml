@@ -28,11 +28,12 @@ jobs:
           ETCD_LISTEN_CLIENT_URLS: http://0.0.0.0:2379
           ETCD_ADVERTISE_CLIENT_URLS: http://0.0.0.0:2379
       localstack:
-        image: localstack/localstack
+        image: localstack/localstack-pro
         ports:
           - 4566:4566
         env:
-          SERVICES: dynamodb,ssm
+          LOCALSTACK_AUTH_TOKEN: ${{ secrets.LOCALSTACK_AUTH_TOKEN }}
+          SERVICES: dynamodb,ssm,acm
       redis:
           image: redis
           # Set health checks to wait until redis has started
